@@ -1,0 +1,113 @@
+\documentclass[12pt, a4paper, bibliography=totoc, listof=totoc]{scrartcl}
+
+% --- Basis-Pakete ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+
+
+% --- OPTIMIERTES LAYOUT (Hier lag das Problem) ---
+\usepackage[
+    left=3cm, 
+    right=2.5cm, 
+    top=3cm, 
+    bottom=3cm, 
+    headheight=2.5cm, % Schafft Platz für das TEKO-Logo
+    headsep=0.8cm     % Abstand zwischen Logo-Linie und Text
+]{geometry}
+
+\usepackage[onehalfspacing]{setspace} 
+\usepackage{graphicx}
+\usepackage{outlines}
+\usepackage{lastpage} 
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{xurl}
+\graphicspath{{Bilder/}}
+
+% --- VERBESSERTER TEXTFLUSS --- 
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000 
+
+% --- Kopf- und Fußzeilen ---
+\usepackage[headsepline, footsepline]{scrlayer-scrpage}
+\clearpairofpagestyles
+
+% Kopfzeile: Logo links
+\ihead{\raisebox{-0.4\height}{\includegraphics[width=3.5cm]{TEKO-logo-share.png}}}
+
+% --- Literaturverwaltung ---
+\usepackage[backend=biber, style=apa]{biblatex} 
+\addbibresource{literatur.bib}
+
+% Fußzeile
+\ifoot{\small TEKO Olten} 
+\cfoot{\small Cédric Caillet} 
+\ofoot{\small Seite \thepage\ von \pageref{LastPage}} 
+
+% Linien-Einstellungen
+\setheadsepline{0.5pt}
+\setfootsepline{0.5pt}
+
+% --- Literaturverwaltung ---
+\usepackage[backend=biber, style=apa]{biblatex} 
+\addbibresource{literatur.bib} % Verweist auf deine .bib Datei
+
+% Optional: Falls du Literatur und Internetquellen trennen willst
+\defbibheading{internet}{\section*{Internetquellen}}
+\defbibheading{literatur}{\section*{Literatur}}
+
+% --- Verweise ---
+\usepackage[colorlinks=true, linkcolor=black, citecolor=black, urlcolor=black]{hyperref}
+
+% --- Titelblatt Daten ---
+\title{Vektordatenbank}
+\subtitle{Modul: Software und Platformarchitektur}
+\author{Cédric Caillet}
+\date{\today}
+\publishers{
+    \vspace{1cm}
+    \textbf{Lehrperson:} Patrick Michel \\
+    \textbf{Schule:} TEKO Olten \\
+    \textbf{Klasse:} O-TIA-TIP-24-S-a 
+}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+\newpage
+
+\tableofcontents
+\newpage
+
+% --- Kapitel-Import ---
+\input{Kapitel/01_Einleitung.tex}
+
+% --- Verzeichnisse ---
+\newpage
+% 1. Abbildungsverzeichnis
+\listoffigures
+
+\newpage
+% 2. Hauptüberschrift für das Quellenverzeichnis
+\printbibheading[title={Quellen- und Literaturverzeichnis}]
+\addcontentsline{toc}{section}{Quellen- und Literaturverzeichnis}
+
+% Unterkategorie: Fachliteratur (alle @book Einträge)
+\printbibliography[
+    type=book, 
+    heading=subbibliography, 
+    title={Fachliteratur}
+]
+
+% Unterkategorie: Internetquellen (alle @online Einträge)
+\printbibliography[
+    type=online, 
+    heading=subbibliography, 
+    title={Internetquellen}
+]
+
+\end{document}
