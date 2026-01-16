@@ -1,0 +1,40 @@
+\section{Recherche zu mindestens zwei Produkten}
+Bei Vektordatenbanken gibt es zwei verschiedene "`arten"'. Es gibt "`Native Vektordatenbank"' und allgemeine Datenbanken welche die Vektor suche unterstützen. Wir werden uns das Produkt pgvector anschauen und ChromaDB.
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{Bilder/Vektordbprod}
+        \caption{Braucht es eine dedizierte Vektordatenbank? (Quelle: \cite{Embeding})}
+        \label{fig: Braucht es eine dedizierte Vektordatenbank}
+\end{figure}
+
+\subsection{pgvector}
+pgvector ist eine Erweiterung für PostgreSQL, die Vektordaten-Typen und Funktionen für die Ähnlichkeitssuche in die weit verbreitete relationale Datenbank einführt. Durch die Integration der Vektorsuche in PostgreSQL bietet es eine nahtlose Lösung für Teams, die schon traditionelle Datenbanken nutzen aber Vektorsuchfunktionen hinzufügen wollen. Die wichtigsten Funktionen von pgvector sind: 
+\begin{outline}
+    \1 Erweitert ein bekanntes Datenbanksystem um vektorbasierte Funktionen sodass keine seperate Vektordatenbank mehr nötig ist.
+    \1 Kompatibel mit Tools und Ökosystemen die schon auf PostgreSQL setzen. 
+    \1 Unterstützt die Suche nach dem ungefähren nächsten Nachbarn \emph{Approximate Nearest Neighbor} ANN, für effiziente Abfragen von hochdimensionalen Vektoren.
+    \1 Macht die Einführung für Leute die sich mit SQL auskennen einfacher und ist damit für Entwickler und Dateningenieure gleichermassen zugänglich.
+    \footcite{Vektordatenbank_datacamp}
+\end{outline}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\linewidth]{Bilder/pgvector}
+        \caption{flowchart pgvector (Quelle: \cite{pgvector_Bild})}
+        \label{fig: flowchart pgvector}
+\end{figure}
+\subsection{ChromaDB}
+ChromaDB ist eine Open Source Native Vektordatenbank, die für effiziente Speicherung, Suche und Verwaltung von Vektoreinbettungen entwickelt wurde. Sie ermöglicht eine schnelle Ähnlichkeitssuche und bietet eine einfache API für Entwickler wodurch sie sich gut für die Erstellung von Bereitstellung KI gesteuerter Anwendungen eignet. Die Key Features von ChromaDB sind: 
+\begin{outline}
+    \1 \textbf{Vektorspeicherung und -abfrage:} Das System sucht mithilfe fortschrittlicher Techniken wie \emph{Hierarchical Navigable Small World} HNSW schnell nach ähnlichen Datenpunkten, da es für die effiziente Verarbeitung hochdimensionaler Daten ausgelegt ist.
+    \1 \textbf{Benutzerfreundlichkeit:} Es bietet eine einfache Python-basierte API, die es sowohl Anfängern als auch Experten leicht macht, mit Vektordaten zu arbeiten, ohne sich um die Komplexität der Vektorindizierung kümmern zu müssen.
+    \1 \textbf{Flexible Speicherung:} Das System bietet sowohl temporären Speicherplatz für Tests und Prototypen als auch permanenten Speicherplatz für die Produktion, wodurch unsere Daten sicher und zuverlässig aufbewahrt werden.
+    \1 \textbf{Integration von Machine Learning:} Es lässt sich problemlos in gängige Einbettungsmodelle von Plattformen wie Hugging Face und OpenAI oder sogar in benutzerdefinierte Modelle integrieren, was eine nahtlose Generierung und Speicherung von Einbettungen ermöglicht.
+    \footcite{ChromaDB}
+\end{outline}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Bilder/ChromaDB}
+        \caption{Retrieval-augmented generation flowchart ChromaDB (Quelle: \cite{ChromaDB_Bild})}
+        \label{fig: flowchart ChromaDB}
+\end{figure}
+

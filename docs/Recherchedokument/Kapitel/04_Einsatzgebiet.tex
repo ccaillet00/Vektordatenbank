@@ -1,0 +1,22 @@
+\section{Einsatzgebiet / Beispiel für Vektordatenbanken}
+Vektordatenbanken wurden in den letzten Jahren immer bedeutender, vor allem durch den Aufstieg von \emph{Large Language Models} LLMs wie GPT-4. Wie ich auch schon erwähnt ist der vorteil einer Vektordatenbank, dass sie Daten als hochdimensionale Vektoren (embeddings) abspeichern, was eine blitzschnelle Ähnlichkeitssuche ermöglicht.
+\subsection{Generative KI und LLMs (RAG)}
+Dies ist aktuell der bedeutendester Einsatzbereich. Vektordatenbanken dienen als Langzeitgedächnis für KI Modelle.
+\begin{itemize}
+    \item \textbf{Retrieval-Augmented Generation (RAG):} Anstelle ein Modell ständig neu zu trainieren speichert man aktuelle Firmendaten oder Dokumente in einer Vektordatenbank. Wenn eine Anfrage kommt sucht die Datenbank nach relevantesten Textabschnitte und gibt diese als Kontext an das LLM weiter.
+\end{itemize}
+
+\subsection{Semantische Suche (Natural Language Processing)}
+Herkömmliche Suchen basieren oft auf Schlüsselwörter (Keywords). Vektordatenbanken ermöglichen eine Suche nach der Bedeutung. 
+\begin{itemize}
+    \item \textbf{Kontextuelles Verständnis:} Wenn wir nach König suchen erhalten wir auch Ergebnise zu Monarch oder Herrscher. Aus dem Grund weil der Vektor für König nahe liegend ist wie Monarch und Herrscher. 
+\end{itemize}
+
+\subsection{Empfehlungssystem}
+Im lebhaften Einzelhandel verändern Vektordatenbanken die Art und Weise wie leute einkaufen. Es macht anhand des Verhalten des Nutzerprofil vorschläge für Produkte deren Vektor nah um Nutzervektor liegen. Es werden auch ähnliche Artikel vorgeschlagen inerhalb millisekunden.
+
+\subsection{Medienanalyse}
+Vektordatenbanken sind ideal für unstrukturierte Daten wie Bilder und Videos. Von medizinischen Scans bis hin zu Überwachungsaufnahmen ist es echt wichtig, Bilder genau zu vergleichen und verstehen zu können. Es kann auch für Gesichtserkennung genutzt werden indem es Biometrische Merkmale als Vektor speichert und mit Live-Aufnahmen abgleicht
+
+\subsection{Anomalieerkennung und Cybersicherheit} In der IT-Sicherheit werden normale Verhaltensmuster (Netzwerkverkehr, Logins) als Vektoren gespeichert um Aussreiser zu erkennen oder Anomalien und somit potenzielle Sicherheitsverletzungen zu vermeiden.
+\footcite{Vektordatenbank_datacamp}

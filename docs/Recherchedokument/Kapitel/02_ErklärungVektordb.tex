@@ -1,1 +1,37 @@
-\section{Was sind Vektordatenbank?}
+\section{Was ist eine Vektordatenbank?}
+Die Vektordatenbank ist ein Datenbanktyp welcher Datenpunkte durch Vektoren mit einer festen Anzahl von Dimensionen dargestellt werden. Vektordatenbanken sind besser in der Lage, unstrukturierte Datensätze zu verarbeiten weil sie eine hochdimensionale Vektoreinbettung verwendet. Die gespeicherten "Vektoren" werden auf der Grundlage von Ähnlichkeiten gruppiert. Dieses Design ermöglicht Abfragen mit geringer Latenz und eignet sich daher ideal für KI-gesteurte Anwendungen. \footcite{Vektordatenbank_IBM}
+
+\subsection{Wie funktioniert eine Vektordatenbank?}
+Wenn wir eine Vektordatenbank mit einer herkömlichen traditionellen Datenbank vergleichen, speichern traditionellen Datenbanken einfache Daten wie Wörter und Zahlen in Form einer Tabelle. Während normale Datenbanken nach exakten Datenübereinstimmungen suchen, versuchen Vektordatenbanken mithilfe spezifischer Ähnlichkeitsmasse nach der besten Übereinstimmung. \footcite{Vektordatenbank_datacamp}
+
+\medskip
+\noindent
+Um unsere Datenpunkte in Vektoren umzuwandeln werden \emph{Einbettungsmodelle} geschult. Es gibt verschiedene Einbettungsmodelle je nach Datentyp. Beispielweise gibt es ein Einbettungsmodell für Audio oder Texte oder Videos und Bilder. Vektordatenbanken speichern und erkennen die Ausgabe dieser Einbettungsmodelle. Inerhalb der Datenbank können praktisch jeder Datentyp auf Grundlagen der Bedeutungszusammenhänge oder Merkmale gruppiert oder als Gegensätze indentifiziert werden. \footcite{Vektordatenbank_IBM}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=1.0\linewidth]{Bilder/Embeddings}
+        \caption{Einbettung von Datenpunkte (Quelle: \cite{Embeding})}
+        \label{fig: Einbettung von Datenpunkte}
+\end{figure}
+
+\subsection{Was sind Vektoren?}
+Ein Vektor ist ein mathematisches Objekt wo in der Mathematik, Physik, Informatik, künstlichen Intelligenz und anderen Anwendungen verwendet werden. Vektoren sind einfach eine numerische Darstellung von Texten, Bildern, Dokumenten oder anderen Formaten in einem hochdimensionalen Raum. Diese Vektoren erhalten Informationen über die Merkmale der Originaldaten, wobei jede Dimension ein bestimmtes Merkmal darstellt.\footcite{Vektordatenbank_Generative_AI}
+
+\medskip
+\noindent 
+Hier ein vereinfachtes Beispiel für eine Worteinbettung für 2 Wörter bei dem jedes Wort als zweidimesionaler Vektor dargestellt wird:
+
+\medskip
+\noindent
+\begin{center}
+    - Hund [5,7] - Katze [8,6]
+\end{center} 
+
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{Bilder/Vektor}
+        \caption{Vektor (Quelle: Eigene Darstellung)}
+        \label{fig: Vektordarstellung}
+\end{figure}
+
+\noindent Es wird erwartet, dass Wörter mit ähnlichen Bedeutungen oder Kontexten ähnliche Vektordarstellungen haben. In unserem Beispiel sehen wir, dass die zwei Vekoren für "`Hund"' und "`Katze"' nahe beieinander liegen, was ihre semantische Beziehung (Bedeutungszusammenhänge) wiederspiegelt.
