@@ -317,6 +317,7 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 #DB Daten
 docker-data
+uploads
 
 # Nuxt dev/build outputs
 .output

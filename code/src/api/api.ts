@@ -5,6 +5,7 @@ import { Ollama } from "ollama"
 
 const ollama = new Ollama()
 
+
 export const initializeVektorAPI = (app: Express) => {
 
     app.post("/api/embedding", async (req: Request, res: Response) => {
