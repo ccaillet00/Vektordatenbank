@@ -1,0 +1,14 @@
+services:
+  database:
+    image: pgvector/pgvector:pg16
+    # container_name: postgresSQL
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: supersecret123
+      POSTGRES_DB: vector_db
+    volumes:
+      - ./docker-data/postgres:/var/lib/postgresql
+      

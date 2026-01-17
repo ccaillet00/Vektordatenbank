@@ -1,5 +1,5 @@
 import express from "express";
-import { initializeAPI } from "../api/index.ts";
+import { initializeAPI } from "./api/index.ts";
 
 const app = express()
 app.use(express.json());

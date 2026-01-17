@@ -1,7 +1,7 @@
 import type { Express } from "express"
-import { initializePostsAPI } from "../api/api.ts"
+import { initializeVektorAPI } from "../api/api.ts"
 
 
 export const initializeAPI = (app: Express) => {
-    initializePostsAPI(app)
+    initializeVektorAPI(app)
 }
