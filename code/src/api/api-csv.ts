@@ -6,7 +6,8 @@ import multer  from "multer"
 import  csv  from "csv-parser"
 import fs  from "fs"
 
-const ollama = new Ollama()
+const OLLAMA_HOST = process.env.OLLAMA_HOST || 'http://localhost:11434'
+const ollama = new Ollama({ host: OLLAMA_HOST })
 const upload = multer({ dest: "uploads/"})
 
 export const initializeVektorAPICSV = (app: Express) => {

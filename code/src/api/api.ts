@@ -4,7 +4,8 @@ import { db } from "../db/database"
 import { Ollama } from "ollama"
 import { cosineDistance, desc, gt, sql } from 'drizzle-orm'
 
-const ollama = new Ollama()
+const OLLAMA_HOST = process.env.OLLAMA_HOST || 'http://localhost:11434'
+const ollama = new Ollama({ host: OLLAMA_HOST })
 
 export const initializeVektorAPI = (app: Express) => {
 
