@@ -18,5 +18,7 @@ services:
       - database
     environment:
       DATABASE_URL: postgressql://postgres:supersecret123@database:5432/vector_db
-    command: ["bash", "-c" ,"sleep 10 && bunx drizzle-kit push"]
+    command: ["bash", "-c" ,"sleep 10 && bun db:generate && bun db:migrate"]
     restart: "no"
+
+  
