@@ -62,4 +62,4 @@ docker compose up -d
 [Demo](/code/)
 &nbsp; 
 
-[Präsenation]()
+[Präsenation](/docs/Präsentation/Vektordatenbank_Präsi.pptx)
